@@ -46,7 +46,7 @@ data/
 
 ```bash
 uv sync
-uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu131
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu132
 ```
 
 运行三组对比实验：
