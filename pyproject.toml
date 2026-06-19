@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dlcd"
+version = "0.1.0"
+description = "Binary image classification experiments for dhole vs fox"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.0",
+    "pillow>=10.4.0",
+]
+
+[project.scripts]
+dlcd = "dlcd.cli:main"
+dlcd-download = "dlcd.download_dataset:main"
+dlcd-report = "dlcd.reporting:main"
+dlcd-generate-docx = "dlcd.generate_word_report:main"
+dlcd-generate-full-report = "dlcd.generate_full_report:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
